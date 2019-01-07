@@ -6,3 +6,9 @@ html, body, .App, #root {
   padding: 0;
   margin: 0
 }
+
+.ant-layout-sider-dark .ant-list-item-meta-content,
+.ant-layout-sider-dark .ant-list-item-meta-content .ant-list-item-meta-title
+{
+  color: white !important;
+}

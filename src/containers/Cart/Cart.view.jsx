@@ -4,7 +4,7 @@ import { List } from 'antd';
 
 export default ({ cart }) => {
   if (!(cart && cart.length)) {
-    return <div>Cart is empty</div>;
+    return <div style={({ color: 'white' })}>Cart is empty</div>;
   }
 
   return (

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
+import { S_STARTED } from '@wonderlandlabs/looking-glass-engine';
 import { StoreContext } from '../StoreProvider';
 
 import CartView from './Cart.view';
@@ -19,8 +20,8 @@ export default class Cart extends Component {
 
   render() {
     const { state, store } = this.context;
-    if (!store.initialized) return '...';
-    eval('debugger');
-    return <CartView cart={store.state.user.shoppingCart} />;
+    if (store.status !== S_STARTED) return '...';
+    console.log('cart: ', store.state);
+    return <CartView cart={store.state.items} />;
   }
 }

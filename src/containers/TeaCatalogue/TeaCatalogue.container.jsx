@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
+import { S_STARTED } from '@wonderlandlabs/looking-glass-engine';
 import { Modal } from 'antd';
 import TeaCatalogueView from './TeaCatalogue.view';
 import TeaView from './TeaView.view';
@@ -22,7 +23,7 @@ export default class TeaCatalogue extends Component {
   get ok() {
     return () => {
       if (this.store) {
-        this.store.actions.addToCart(this.currentTea())
+        this.store.do.addToCart(this.currentTea(), 1)
           .catch(err => console.log('error in addToCart:', err));
       }
       return this.setState({ visible: false });
@@ -48,14 +49,15 @@ export default class TeaCatalogue extends Component {
 
   render() {
     const { state, store } = this.context;
-    if (!store.isInitialized) {
+
+    if (store.status !== S_STARTED) {
       return <TeaCatalogueView teas={[]} />;
     }
     let currentTea;
     if (this.state.id) {
       currentTea = this.currentTea(this.state.id);
     }
-    console.log('rendering', this.state);
+    console.log('+++++++++ rendering', state);
     return (
       <React.Fragment>
         <Modal

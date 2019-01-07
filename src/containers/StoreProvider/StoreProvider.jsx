@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unused-state */
 import React, { PureComponent } from 'react';
-import store from '../../util/store';
+import store from '../../store';
 
 export const StoreContext = React.createContext(store.state);
 
@@ -17,7 +17,7 @@ export default class App extends PureComponent {
   }
 
   componentDidMount() {
-    this.state.store.subscribe((state) => {
+    this.state.store.stream.subscribe(({state}) => {
       console.log('store state: ', state);
       this.setState({ state: { ...state } });
     });

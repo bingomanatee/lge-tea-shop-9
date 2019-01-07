@@ -957,10 +957,10 @@
     bottlejs "^1.7.1"
     is "^3.2.1"
 
-"@wonderlandlabs/looking-glass-engine@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@wonderlandlabs/looking-glass-engine/-/looking-glass-engine-1.0.8.tgz#4ff8b186758b01fb76f969a1a9a9d341575f0f36"
-  integrity sha512-jnsrtz0N+EpYNJn2Am6J0sNMExiheuRgwjFKY5nV03IY5P3lklkk91eyFHQs1ftchgkWyJpJAT7MsRDMSORP9g==
+"@wonderlandlabs/looking-glass-engine@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@wonderlandlabs/looking-glass-engine/-/looking-glass-engine-1.0.10.tgz#2c02c5f9f53274fec205389f3f8e2e698fe52d52"
+  integrity sha512-sA1IjqhmFdgHDrhkrWjvMfeqOBwjlTCBeQWsKGc5KfCc/8OEDQGvhpcOOmjiGB3u9Pvyx1jDwKW1BLG96tvhcA==
   dependencies:
     "@wonderlandlabs/propper" "^2.0.3"
     bottlejs "^1.7.1"

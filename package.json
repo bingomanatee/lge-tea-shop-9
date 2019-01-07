@@ -10,7 +10,7 @@
     "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test"
   },
   "dependencies": {
-    "@wonderlandlabs/looking-glass-engine": "^1.0.8",
+    "@wonderlandlabs/looking-glass-engine": "^1.0.10",
     "antd": "^3.11.4",
     "prop-types": "^15",
     "react": "^16",
